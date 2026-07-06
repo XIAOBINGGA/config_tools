@@ -1,0 +1,22 @@
+# ─── Emacs 自动生成 ──────────────────────────────────
+/eln-cache
+/elpa
+/backups
+/auto-save
+/auto-save-list
+/custom.el
+/recentf
+/savehist
+/history
+/places
+/bookmarks
+
+# ─── Projectile ──────────────────────────────────────
+/projectile-bookmarks.eld
+/projectile-frecency.eld
+
+# ─── Tree-sitter 二进制语法文件 ─────────────────────
+/tree-sitter/*.so
+
+# ─── Emacs 自动备份/交换文件 ────────────────────────
+\#*\#
