@@ -11,7 +11,7 @@
 
 首次部署执行：
 ```bash
-ln -sf $PWD/emacs ~/.emacs.d
+./install-emacs.sh
 ```
 
 新增工具配置时，在本仓库创建对应目录，然后将家目录的原始配置替换为符号链接：

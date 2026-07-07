@@ -11,6 +11,7 @@
       '(("melpa"  . 10)
         ("nongnu" . 5)
         ("gnu"    . 0)))
+(setq package-quickstart t)
 (package-initialize)
 
 ;; ─── 确保 use-package 已安装 ──────────────────────────────────────────

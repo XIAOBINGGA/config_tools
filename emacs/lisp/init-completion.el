@@ -65,7 +65,7 @@
   :init (global-corfu-mode)
   :custom
   (corfu-auto t)                ;; 自动弹出
-  (corfu-auto-delay 0.2)        ;; 延迟 0.2s
+  (corfu-auto-delay 0.3)        ;; 延迟 0.3s
   (corfu-auto-prefix 2)          ;; 最少 2 字符触发
   (corfu-separator ?\s)          ;; 空格分隔多词补全
   (corfu-preview-current nil)

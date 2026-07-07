@@ -28,8 +28,7 @@
 (global-hl-line-mode 1)          ;; 高亮当前行
 
 ;; ─── 备份与自动保存 ────────────────────────────────────────────────────
-(setq display-line-numbers-width-start t
-      recentf-max-saved-items 200
+(setq recentf-max-saved-items 200
       auto-revert-verbose nil
       create-lockfiles nil
       backup-directory-alist

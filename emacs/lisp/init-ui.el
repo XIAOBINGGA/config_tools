@@ -4,9 +4,8 @@
 (defun my/set-font ()
   (interactive)
   (when (display-graphic-p)
-    (let* ((font-size (if (string-match "1440x900\\|1920x1080\\|2560x1440"
-                                        (format "%s" (display-pixel-width)))
-                          my/font-size-hidpi my/font-size-normal))
+    (let* ((pixel-width (display-pixel-width))
+           (font-size (if (>= pixel-width 1920) my/font-size-hidpi my/font-size-normal))
            (english-font my/english-font)
            (cjk-font my/cjk-font))
       ;; 默认英文字体
@@ -69,8 +68,5 @@
   :ensure t
   :hook (prog-mode . rainbow-delimiters-mode))
 
-(use-package highlight-parentheses
-  :ensure t
-  :hook (prog-mode . highlight-parentheses-mode))
 
 (provide 'init-ui)

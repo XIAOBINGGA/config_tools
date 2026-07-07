@@ -38,8 +38,7 @@
 
 (use-package tsx-ts-mode
   :ensure nil
-  :mode ("\\.tsx\\'" "\\.ts\\'" "\\.mts\\'" "\\.cts\\'")
-  :hook (tsx-ts-mode . eglot-ensure))
+  :mode ("\\.tsx\\'" "\\.ts\\'" "\\.mts\\'" "\\.cts\\'"))
 
 (use-package json-ts-mode
   :ensure nil
@@ -75,11 +74,10 @@
     (indent-region (point-min) (point-max))
     (message "Indented region (no formatter found)"))))
 
-;; ─── dtrt-indent: 自动检测文件缩进风格 ──────────────────────────────
+;; ─── dtrt-indent: 自动检测文件缩进风格 (手动: C-c i 或 M-x dtrt-indent-mode) ───
 (use-package dtrt-indent
   :ensure t
-  :hook ((prog-mode . dtrt-indent-mode)
-         (web-mode . dtrt-indent-mode)))
+  :commands (dtrt-indent-mode dtrt-indent-set-language-mode))
 
 ;; ─── Rainbow Mode: CSS 颜色值高亮 ────────────────────────────────────
 (use-package rainbow-mode

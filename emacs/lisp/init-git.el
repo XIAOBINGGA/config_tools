@@ -3,6 +3,7 @@
 ;; ─── Magit: Git 客户端 ──────────────────────────────────────────────
 (use-package magit
   :ensure t
+  :defer t
   :bind (("C-c g g" . magit-status)
          ("C-c g l" . magit-log)
          ("C-c g f" . magit-file-popup)
@@ -48,14 +49,14 @@
   :ensure t
   :after magit)
 
-;; ─── Blamer: 行级 git blame ──────────────────────────────────────────
+;; ─── Blamer: 行级 git blame (手动启动: M-x blamer-mode) ─────────────
 (use-package blamer
   :ensure t
+  :commands blamer-mode
   :custom
   (blamer-idle-time 0.5)
   (blamer-min-commit-count 1)
   (blamer-delay 0.3)
-  (blamer-max-summary-length 60)
-  :hook (prog-mode . blamer-mode))
+  (blamer-max-summary-length 60))
 
 (provide 'init-git)
