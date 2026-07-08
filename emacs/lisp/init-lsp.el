@@ -25,10 +25,9 @@
               ("C-c l d" . xref-find-definitions)  ;; 跳转定义
               ("C-c l R" . xref-find-references))) ;; 引用查找
 
-;; ─── Eldoc: 回显区文档提示 ──────────────────────────────────────────
+;; ─── Eldoc: 回显区文档提示 (eglot 自动启用, 不全局挂 hook) ──────
 (use-package eldoc
   :ensure nil
-  :hook (prog-mode . eldoc-mode)
   :custom
   (eldoc-echo-area-use-multiline-p nil)
   (eldoc-documentation-strategy 'eldoc-documentation-compose-eagerly))

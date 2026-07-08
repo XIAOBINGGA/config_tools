@@ -64,29 +64,29 @@
 (global-set-key (kbd "C-c C-n") 'next-error)
 (global-set-key (kbd "C-c C-p") 'previous-error)
 
-;; ─── 格式化 ──────────────────────────────────────────────────────────
-(global-set-key (kbd "C-c \\") 'my/format-buffer)
+;; ─── 格式化 (非核心, 需要 init-web) ──────────────────────────────────
+;; (global-set-key (kbd "C-c \\") 'my/format-buffer)
 
-;; ─── 缩进同步 ────────────────────────────────────────────────────────
-(global-set-key (kbd "C-c i") (lambda ()
-                                (interactive)
-                                (dtrt-indent-set-language-mode)
-                                (message "dtrt-indent: sync indent from file")))
+;; ─── 缩进同步 (非核心, 需要 init-web) ────────────────────────────────
+;; (global-set-key (kbd "C-c i") (lambda ()
+;;                                 (interactive)
+;;                                 (dtrt-indent-set-language-mode)
+;;                                 (message "dtrt-indent: sync indent from file")))
 
 ;; ─── 用 Backspace 作为帮助键 ────────────────────────────────────────
 (define-key key-translation-map (kbd "C-h") (kbd "<DEL>"))
 
-;; ─── 搜索 ────────────────────────────────────────────────────────────
-(global-set-key (kbd "M-&") 'projectile-grep)
-(global-set-key (kbd "M-^") 'deadgrep)
+;; ─── 搜索 (非核心, 需要 init-project) ────────────────────────────────
+;; (global-set-key (kbd "M-&") 'projectile-grep)
+;; (global-set-key (kbd "M-^") 'deadgrep)
 
 ;; ─── 替换 ────────────────────────────────────────────────────────────
 (global-set-key (kbd "C-c r") 'query-replace-regexp)
 (global-set-key (kbd "C-c R") 'query-replace)
 
 ;; ─── 杂项 ────────────────────────────────────────────────────────────
-(global-set-key (kbd "C-c q") 'restart-emacs)
-(global-set-key (kbd "C-c g t") 'my/toggle-diff-hl)
+;; (global-set-key (kbd "C-c q") 'restart-emacs)    ;; 非核心, 需要 restart-emacs 包
+;; (global-set-key (kbd "C-c g t") 'my/toggle-diff-hl) ;; 非核心, 需要 init-git
 (global-set-key (kbd "C-c C-b") 'my/toggle-bold)
 
 ;; ─── 字体缩放 ────────────────────────────────────────────────────────

@@ -63,10 +63,10 @@
   (doom-modeline-modal-icon nil)
   (doom-modeline-env-version t))    ;; 显示语言版本 (node/python等)
 
-;; ─── 彩虹括号 ─────────────────────────────────────────────────────────
+;; ─── 彩虹括号 (仅在 emacs-lisp 模式启用, 避免通用模式卡顿) ──────
 (use-package rainbow-delimiters
   :ensure t
-  :hook (prog-mode . rainbow-delimiters-mode))
+  :hook (emacs-lisp-mode . rainbow-delimiters-mode))
 
 
 (provide 'init-ui)

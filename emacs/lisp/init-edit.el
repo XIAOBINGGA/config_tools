@@ -1,14 +1,5 @@
 ;;; init-edit.el --- 编辑增强: 括号 / 多光标 / which-key / helpful
 
-;; ─── Smartparens: 智能括号操作 ───────────────────────────────────────
-(use-package smartparens
-  :ensure t
-  :hook (prog-mode . smartparens-mode)
-  :config
-  (require 'smartparens-config)
-  (sp-local-pair 'web-mode "<" nil :when '(sp-point-after-word-p sp-point-before-word-p))
-  (sp-local-pair 'html-mode "<" nil :when '(sp-point-after-word-p sp-point-before-word-p)))
-
 ;; ─── Expand Region: 逐级扩大选中区域 ────────────────────────────────
 (use-package expand-region
   :ensure t

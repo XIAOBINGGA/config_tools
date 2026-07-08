@@ -15,14 +15,14 @@
 (require 'init-keybinds)     ;; 快捷键绑定
 
 ;; 延迟加载 (非关键模块, 减少 startup 时间)
-(add-hook 'emacs-startup-hook
-          (lambda ()
-            (require 'init-lsp)
-            (require 'init-web)
-            (require 'init-flutter)
-            (require 'init-elisp)
-            (require 'init-project)
-            (require 'init-git)))
+;; (add-hook 'emacs-startup-hook
+;;           (lambda ()
+;;             (require 'init-lsp)
+;;             (require 'init-web)
+;;             (require 'init-flutter)
+;;             (require 'init-elisp)
+;;             (require 'init-project)
+;;             (require 'init-git)))
 
 ;; ─── 启动完成后恢复 GC ─────────────────────────────────────────────────
 (setq gc-cons-threshold 16777216
